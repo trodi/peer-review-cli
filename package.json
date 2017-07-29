@@ -1,0 +1,30 @@
+{
+  "name": "peer-review-cli",
+  "version": "0.1.0",
+  "description": "Generate peer review email from markdown template and TFS PBI.",
+  "bin": {
+    "peer-review": "cli.js"
+  },
+  "scripts": {
+    "test": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trodi/peer-review-cli.git"
+  },
+  "keywords": [
+    "cli",
+    "peer review",
+    "visual studio team services"
+  ],
+  "author": "Troy McKinnon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/trodi/peer-review-cli/issues"
+  },
+  "homepage": "https://github.com/trodi/peer-review-cli#readme",
+  "devDependencies": {
+  "tslint": "^5.5.0",
+  "typescript": "^2.4.2"
+  }
+}
