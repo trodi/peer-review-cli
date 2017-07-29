@@ -24,7 +24,19 @@
   },
   "homepage": "https://github.com/trodi/peer-review-cli#readme",
   "devDependencies": {
-  "tslint": "^5.5.0",
-  "typescript": "^2.4.2"
+    "@types/markdown-it": "0.0.2",
+    "@types/node": "^8.0.17",
+    "@types/opn": "^3.0.28",
+    "@types/request": "^2.0.0",
+    "@types/yargs": "^8.0.1",
+    "tslint": "^5.5.0",
+    "typescript": "^2.4.2"
+  },
+  "dependencies": {
+    "electron": "^1.6.11",
+    "markdown-it": "^8.3.1",
+    "opn": "^5.1.0",
+    "request": "^2.81.0",
+    "yargs": "^8.0.2"
   }
 }
