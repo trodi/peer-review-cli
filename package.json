@@ -1,12 +1,12 @@
 {
   "name": "peer-review-cli",
   "version": "0.1.0",
-  "description": "Generate peer review email from markdown template and TFS PBI.",
+  "description": "Generate peer review email from a markdown template and Visual Studio Team Services work item number",
   "bin": {
     "peer-review": "cli.js"
   },
   "scripts": {
-    "test": "tsc"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
