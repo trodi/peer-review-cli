@@ -3,7 +3,9 @@ import * as Yargs from "yargs";
 /** Parse cli arguments. */
 export const parse = (): Yargs.Arguments => {
     const argv: Yargs.Arguments = Yargs
-        .usage("Usage: peer-review <item-number> [options]")
+        .usage("Usage: peer-review <item-number> [options]\n"
+            + "Opens and populates default mail client with peer review email. "
+            + "Copies generated email body to clipboard.")
         .help("h")
         .alias("h", "help")
         .version()
@@ -16,10 +18,12 @@ export const parse = (): Yargs.Arguments => {
         .alias("p", "password")
         .describe("p", "Password for Visual Studio Team Services project.")
         .alias("t", "template")
-        .describe("t", "Markdown template to use.")
+        .describe("t", "Email markdown template to use.")
         .describe("to", "Recipient of peer review email.")
         .demandCommand(1) // require the work item number
-        .demandOption(["t", "proj", "u", "p"])
+        .demandOption(["template", "project", "user", "password"])
+        .example("peer-review 135", "Generates email for work item 135, assuming "
+            + "all other options are defined by environment variables.")
         .epilog(`All options can be defined via environment variables prefixed `
             + `with "PEER_REVIEW" (e.g, PEER_REVIEW_PASSWORD).`)
         .argv;

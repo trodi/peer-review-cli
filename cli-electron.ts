@@ -8,9 +8,9 @@ import * as Main from "./main";
 const argv: Yargs.Arguments = Args.parse();
 Main.generate({
     item: Number(argv._[0]),
-    project: argv.url,
-    pw: argv.p,
-    template: argv.t,
+    project: argv.project,
+    pw: argv.password,
+    template: argv.template,
     to: argv.to,
-    user: argv.u,
+    user: argv.user,
 });

@@ -49,7 +49,7 @@ export const generate = (opts: Options): void => {
         const populatedTemplate: string = template.replace("#?", `#${id} - ${title}`);
         const templateMd: string = md.render(populatedTemplate);
         Clipboard.writeHTML(templateMd);
-        Opn(`mailto:?to=${opts.to}&subject=${subject}&body=${msg}`, { wait: false });
+        Opn(`mailto:?to=${opts.to || ""}&subject=${subject}&body=${msg}`, { wait: false });
         App.quit();
     });
 };
