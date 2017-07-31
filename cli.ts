@@ -7,12 +7,14 @@
  */
 
 import * as Child from "child_process";
+import * as Path from "path";
 import * as Yargs from "yargs";
 import * as Args from "./arg-parsing";
 
 // Parse cli args before requiring running electron.
 const argv: Yargs.Arguments = Args.parse();
 
-Child.exec("electron cli-electron.js " + process.argv.slice(2), (err: Error, stdout: string, errout: string) => {
+Child.exec(`electron ${Path.join(__dirname, "cli-electron.js")} ` + process.argv.slice(2),
+    (err: Error, stdout: string, errout: string) => {
     console.log("Error:", errout);
 });
