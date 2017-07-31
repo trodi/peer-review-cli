@@ -1,12 +1,16 @@
 {
-  "name": "peer-review-cli",
+  "name": "@trodi/peer-review-cli",
   "version": "0.1.0",
   "description": "Generate peer review email from a markdown template and Visual Studio Team Services work item number",
   "bin": {
     "peer-review": "cli.js"
   },
+  "engines": {
+    "node": ">=6.0.0"
+  },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
