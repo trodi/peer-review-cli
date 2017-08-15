@@ -5,6 +5,9 @@
   "bin": {
     "peer-review": "cli.js"
   },
+  "files": [
+    "*.js"
+  ],
   "engines": {
     "node": ">=6.0.0"
   },
