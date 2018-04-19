@@ -15,6 +15,6 @@ import * as Args from "./arg-parsing";
 const argv: Yargs.Arguments = Args.parse();
 
 Child.exec(`./node_modules/.bin/electron ${Path.join(__dirname, "cli-electron.js")} ` + process.argv.slice(2),
-    (err: Error, stdout: string, errout: string) => {
-    console.log("Error:", errout);
+    (err: Error | null, stdout: string, errout: string) => {
+        console.log("Error:", errout);
 });

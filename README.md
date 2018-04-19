@@ -8,7 +8,12 @@ Generate peer review email from a markdown template and Visual Studio Team Servi
 `peer-review --help`
 
 ## Build
-`npm run build`
+* `npm i`
+* `npm run build`
+
+## Publish
+* `npm version <major|minor|patch>`
+* `npm publish`
 
 ## License
 [MIT License](LICENSE)
