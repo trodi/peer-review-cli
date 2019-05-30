@@ -12,6 +12,7 @@
     "node": ">=6.0.0"
   },
   "scripts": {
+    "start": "node cli.js",
     "build": "tsc",
     "prepublishOnly": "npm run build"
   },
