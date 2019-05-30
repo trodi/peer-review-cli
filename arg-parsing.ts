@@ -18,7 +18,7 @@ export const parse = (): Yargs.Arguments => {
         .alias("p", "password")
         .describe("p", "Password for Visual Studio Team Services project.")
         .alias("t", "template")
-        .describe("t", "Email markdown template to use.")
+        .describe("t", "Email markdown template to use. Interpolated values: ${ID}, ${TITLE}. ")
         .describe("to", "Recipient of peer review email.")
         .demandCommand(1) // require the work item number
         .demandOption(["template", "project", "user", "password"])

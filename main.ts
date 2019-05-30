@@ -46,7 +46,9 @@ export const generate = (opts: Options): void => {
         const md = new MarkdownIt();
         // NOTE: can't put html in mailto body
         const template: string = FS.readFileSync(opts.template, "utf-8");
-        const populatedTemplate: string = template.replace("#?", `#${id} - ${title}`);
+        const populatedTemplate: string = template
+            .replace("${ID}", id)
+            .replace("${TITLE}", title);
         const templateMd: string = md.render(populatedTemplate);
         Clipboard.writeHTML(templateMd);
         Opn(`mailto:?to=${opts.to || ""}&subject=${subject}&body=${msg}`, { wait: false });
