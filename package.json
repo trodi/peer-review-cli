@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "node cli.js",
-    "build": "tsc",
+    "build": "tsc && tslint \"**/*.ts\" --exclude \"node_modules/**/*\"",
     "prepublishOnly": "npm run build"
   },
   "repository": {

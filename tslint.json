@@ -8,7 +8,7 @@
         "no-console": false,
         "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case", "allow-leading-underscore"],
         "interface-name": false,
-        "no-unused-expression": false,
+        "no-unused-expression": false
     },
     "rulesDirectory": []
 }
