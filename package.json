@@ -41,7 +41,7 @@
     "typescript": "^2.4.2"
   },
   "dependencies": {
-    "electron": "^1.6.11",
+    "electron": "^7.2.4",
     "markdown-it": "^8.3.1",
     "opn": "^5.1.0",
     "request": "^2.81.0",
